@@ -42,10 +42,13 @@
 % Indicar o nome do autor e o curso/nível (grad-mestrado-doutorado-especial)
 \title{Título do Trabalho}
 \author{%
- \IEEEauthorblockN{Lucy Miyuki Miyagusiku Narita\,\IEEEauthorrefmark{1}}
- \IEEEauthorblockA{\IEEEauthorrefmark{1}%
-                   Ciência da Computação - Graduação \\
-                   E-mail: ra182851@students.ic.unicamp.br}
+ \IEEEauthorblockN{João Vitor Araki Gonçalves\,\IEEEauthorrefmark{1}}
+ \IEEEauthorblockN{Lucy Miyuki Miyagusiku Narita\,\IEEEauthorrefmark{2}}
+ \IEEEauthorblockA{Ciência da Computação - Graduação \\
+                   \IEEEauthorrefmark{1}%
+                   ra176353@students.ic.unicamp.br\\
+                   \IEEEauthorrefmark{2}%
+                   ra182851@students.ic.unicamp.br}
 }
 
 %%*****************************************************************************
@@ -53,27 +56,12 @@
 \maketitle
 
 %%*****************************************************************************
-% Resumo do trabalho
-\begin{abstract}
- O resumo deve conter uma breve descrição sobre várias partes do seu trabalho que serão tratadas no decorrer do texto. Primeiramente, pode-se descrever brevemente o problema no qual você está trabalhando: Por que você está desenvolvendo este trabalho? Qual a motivação para este desenvolvimento? Por que ele é importante? O resumo deve conter também um breve descritivo da metodologia que você usou no desenvolvimento: Que problema foi tratado? Como a solução foi construída/desenvolvida? Quais as tecnologias utilizadas? Finalmente, deve falar um pouco sobre os resultados que você conseguiu: o resultado final ficou bom? Quais os seus principais diferenciais? Qual a eficiência do desenvolvimento?
-\end{abstract}
-
-% Indique três palavras-chave que descrevem o trabalho
-\begin{IEEEkeywords}
- Palavras-chave
-\end{IEEEkeywords}
-
-%%*****************************************************************************
 % Modifique as seções de acordo com o seu projeto
 
 \section{Introdução}
 
-Na introdução você deve descrever os aspectos mais relevantes sobre a revisão bibliográfica que fez e do problema que você decidiu tratar. Quais foram os pontos estudados/pesquisados? Quais os outros trabalhos similares ao seu que você encontrou? 
-
-Também na introdução espera-se que você descreva um pouco sobre a motivação de trabalhar com esse tema. A descrição do seu trabalho será feita em detalhes nas próximas seções do artigo.
-
-
-No final da introdução, é comum inserir um parágrafo descrevendo o que será encontrado em cada seção no restante do seu texto. Exemplo: Este trabalho encontra-se organizado da seguinte forma: a seção 2 apresenta X. A seção 3 descreve Y. Os resultados são apresentados na seção 4, e as conclusões são apresentadas na seção 5.
+Este trabalho tem como objetivo implementar e aplicar uma técnica de computação evolutiva na prática.
+Algoritmos genéticos problemas são resolvidos através de um processo evolutivo que resulta na solução mais adequada dado algum critério, são, portanto, muito utilizados para problemas de otimização e de busca onde o crescimento exponencial das combinações faz de um algoritmo tradicional de busca inviável.
 
 \section{Dependências}
 
@@ -81,11 +69,20 @@ O projeto foi desenvolvido em Python 3.X. As dependências se encontram no arqui
 
 \section{Trabalho Proposto}
 
-Nesta seção descreva de forma abrangente, porém clara e organizada, o seu trabalho.
+As redes neurais são o ponto central da revolução do \emph{Deep Learning}. A tecnologia avançou a ponto de ser capaz de sintetizar voz, reconhecer imagens e alterar o conteúdo de videos de forma a adulterar a informação passada originalmente.
 
-\subsection{O Modelo}
+Para este projeto, procuramos fazer o \emph{tunning} dos parâmetros de uma rede neural com um algoritmo genético. Trabalho que normalmente é feito "à mão" com base em experimentação e determinação destes valores de forma empírica.
 
-Descrição do indivíduo e da população.
+\subsection{Indivíduo (Cromossomo)}
+
+Nosso indivíduo é composto por 4 valores reais:
+
+\begin{itemize}
+    \item número de epochs
+    \item quantidade de layers
+    \item output space dimension para cada layer
+    \item número de features
+\end{itemize}
 
 \section{Resultados e Discussão}
 
@@ -104,12 +101,12 @@ Nesta seção você deve apresentar claramente os resultados obtidos para os tes
 
 \section{Conclusões}
 
-Nesta seção, faça uma análise geral de seu trabalho, levando em conta todo o processo de desenvolvimento e os resultados. Quais os seus pontos fortes? Quais os seus pontos fracos? Quais aspectos de sua metodologia de trabalho foram positivas? Quais foram negativas? O que você recomendaria (ou não recomendaria) a outras pessoas que estejam realizando trabalhos similares aos seus? 
+Nesta seção, faça uma análise geral de seu trabalho, levando em conta todo o processo de desenvolvimento e os resultados. Quais os seus pontos fortes? Quais os seus pontos fracos? Quais aspectos de sua metodologia de trabalho foram positivas? Quais foram negativas? O que você recomendaria (ou não recomendaria) a outras pessoas que estejam realizando trabalhos similares aos seus? \cite{Rowling:1997}
 
 
 %******************************************************************************
 % Referências - Definidas no arquivo Relatorio.bib
- +-------------+
+ +----------------+
 
 \bibliographystyle{IEEEtran}
 
