@@ -67,6 +67,7 @@ Algoritmos genéticos problemas são resolvidos através de um processo evolutiv
 
 O projeto foi desenvolvido em Python 3.X. As dependências se encontram no arquivo \texttt{requirements.txt}.
 
+Utilizamos o python, pois a biblioteca utilizada para \emph{deeplearning} foi o \emph{tensorflow}, e não haveria vantagem em implementar o algorítmo genético em outra linguagem, aumentando a complexidade do projeto e exigindo uma interface entre o python e uma outra linguagem qualquer.
 \section{Trabalho Proposto}
 
 As redes neurais são o ponto central da revolução do \emph{Deep Learning}. A tecnologia avançou a ponto de ser capaz de sintetizar voz, reconhecer imagens e alterar o conteúdo de videos de forma a adulterar a informação passada originalmente.
@@ -105,8 +106,8 @@ Devido à questões de tempo de execução, só pudemos realizar testes profundo
 \begin{itemize}
     \item tamanho da população: 5
     \item gerações (max): 100
-    \item taxa de mutação:
-    \item taxa de crossover:
+    \item taxa de mutação: 0.2
+    \item taxa de crossover: 0.6
     \item técnica de seleção: a melhor metade da população
     \item técnica de crossover: aleatóriamente seleciona um ou mais alelos para fazer o crossover
     \begin{itemize}
@@ -121,7 +122,7 @@ Devido à questões de tempo de execução, só pudemos realizar testes profundo
         \item \emph{features}: gera um novo número aleatório dentro do conjunto de valores válidos
     \end{itemize}
     \item epochs: 4
-    \item layers: [0-4]
+    \item layers: [1-4]
     \item neurons: [100-2000]
     \item features: [1-100]
     \item critério de parada: limite de gerações atingido
@@ -142,8 +143,8 @@ Devido à questões de tempo de execução, só pudemos realizar testes profundo
 \begin{itemize}
     \item tamanho da população: 10
     \item gerações (max): 100
-    \item taxa de mutação:
-    \item taxa de crossover:
+    \item taxa de mutação: 0.2
+    \item taxa de crossover: 0.6
     \item técnica de seleção: a melhor metade da população
     \item técnica de crossover: aleatóriamente seleciona um ou mais alelos para fazer o crossover
     \begin{itemize}
@@ -160,7 +161,7 @@ Devido à questões de tempo de execução, só pudemos realizar testes profundo
         \item \emph{epochs}: gera um novo número aleatório dentro do conjunto de valores válidos
     \end{itemize}
     \item epochs: [1-10]
-    \item layers: [0-4]
+    \item layers: [1-4]
     \item neurons: [100-2000]
     \item features: [1-100]
     \item critério de parada: limite de gerações atingido
@@ -189,8 +190,8 @@ Devido à questões de tempo de execução, só pudemos realizar testes profundo
 \begin{itemize}
     \item tamanho da população: 10
     \item gerações (max): 100
-    \item taxa de mutação:
-    \item taxa de crossover:
+    \item taxa de mutação: 0.7
+    \item taxa de crossover: 0.8
     \item técnica de seleção: a melhor metade da população
     \item técnica de crossover: aleatóriamente seleciona um ou mais alelos para fazer o crossover
     \begin{itemize}
@@ -204,7 +205,7 @@ Devido à questões de tempo de execução, só pudemos realizar testes profundo
         \item \emph{epochs}: gera um novo número aleatório (distribuição uniforme) dentro do conjunto de valores válidos
     \end{itemize}
     \item epochs: [1-10]
-    \item layers: [0-4]
+    \item layers: [1-4]
     \item neurons: [100-2000]
     \item features: [1-100]
     \item critério de parada: limite de gerações atingido
@@ -228,17 +229,219 @@ Devido à questões de tempo de execução, só pudemos realizar testes profundo
         }
 \end{figure}
 
+\subsubsection{Configuração 4}
 
 \begin{itemize}
-    \item tamanho da população
-    \item critério de parada
-    \item técnica de seleção
-    \item técnica de crossover
-    \item técnica de mutação
-    \item método de substituição
-    \item taxa de mutação
-    \item taxa de crossover
+    \item tamanho da população: 5
+    \item gerações (max): 100
+    \item taxa de mutação: 0.7
+    \item taxa de crossover: 0.8
+    \item técnica de seleção: a melhor metade da população
+    \item técnica de crossover: aleatóriamente seleciona um ou mais alelos para fazer o crossover
+    \begin{itemize}
+        \item \emph{neurons}: troca o último valor entre os indivíduos
+        \item \emph{epochs}: troca para a quantidade de epochs do companheiro
+    \end{itemize}
+    \item técnica de mutação: aleatóriamente seleciona um ou mais alelos para mutar, baseando-se na taxa de mutação dos alelos.
+    \begin{itemize}
+        \item \emph{layers}: gera um número aleatório e duplica ou remove dados da lista de \emph{neurons} conforme necessário.
+        \item \emph{neurons}: gera um novo número aleatório (distribuição uniforme) dentro do conjunto de valores válidos
+        \item \emph{epochs}: gera um novo número aleatório (distribuição uniforme) dentro do conjunto de valores válidos
+    \end{itemize}
+    \item epochs: 5
+    \item layers: [1-4]
+    \item neurons: [100-2000]
+    \item features: [1-100]
+    \item critério de parada: limite de gerações atingido
+    \item loss: Figura \ref{fig:loss_mnist_04}
+    \item accuracy: Figura \ref{fig:acc_mnist_04}
+    \item \textbf{melhor indivíduo}: Layers: 2, Neurons: [467.68464507  88.63032893], Loss: 0.05897278582537547, Epochs: 5
 \end{itemize}
+
+\begin{figure}[htbp]
+        \centering \includegraphics[width=1\columnwidth]{./ia_proj_images/mnist/4/loss.png}
+        \caption{
+                \label{fig:loss_mnist_04}
+                Loss
+        }
+\end{figure}
+\begin{figure}[htbp]
+        \centering \includegraphics[width=1\columnwidth]{./ia_proj_images/mnist/4/acc.png}
+        \caption{
+                \label{fig:acc_mnist_04}
+                Accuracy
+        }
+\end{figure}
+
+\subsubsection{Configuração 5}
+
+\begin{itemize}
+    \item tamanho da população: 5
+    \item gerações (max): 100
+    \item taxa de mutação: 0.7
+    \item taxa de crossover: 0.8
+    \item técnica de seleção: a melhor metade da população
+    \item técnica de crossover: aleatóriamente seleciona um ou mais alelos para fazer o crossover
+    \begin{itemize}
+        \item \emph{neurons}: troca o último valor entre os indivíduos
+        \item \emph{epochs}: troca para a quantidade de epochs do companheiro
+    \end{itemize}
+    \item técnica de mutação: aleatóriamente seleciona um ou mais alelos para mutar, baseando-se na taxa de mutação dos alelos.
+    \begin{itemize}
+        \item \emph{layers}: gera um número aleatório e duplica ou remove dados da lista de \emph{neurons} conforme necessário.
+        \item \emph{neurons}: gera um novo número aleatório (distribuição uniforme) dentro do conjunto de valores válidos
+        \item \emph{epochs}: gera um novo número aleatório (distribuição uniforme) dentro do conjunto de valores válidos
+    \end{itemize}
+    \item epochs: [1-10]
+    \item layers: [1-4]
+    \item neurons: [100-2000]
+    \item features: [1-100]
+    \item critério de parada: limite de gerações atingido
+    \item loss: Figura \ref{fig:loss_mnist_05}
+    \item accuracy: Figura \ref{fig:acc_mnist_05}
+    \item \textbf{melhor indivíduo}: Layers: 2, Neurons: [467.68464507  88.63032893], Loss: 0.05897278582537547, Epochs: 5
+\end{itemize}
+
+\begin{figure}[htbp]
+        \centering \includegraphics[width=1\columnwidth]{./ia_proj_images/mnist/5/loss.png}
+        \caption{
+                \label{fig:loss_mnist_05}
+                Loss
+        }
+\end{figure}
+\begin{figure}[htbp]
+        \centering \includegraphics[width=1\columnwidth]{./ia_proj_images/mnist/5/acc.png}
+        \caption{
+                \label{fig:acc_mnist_05}
+                Accuracy
+        }
+\end{figure}
+
+\subsubsection{Configuração 6}
+
+\begin{itemize}
+    \item tamanho da população: 5
+    \item gerações (max): 100
+    \item taxa de mutação: 0.7
+    \item taxa de crossover: 0.8
+    \item técnica de seleção: toda a população
+    \item técnica de crossover: aleatóriamente seleciona um ou mais alelos para fazer o crossover
+    \begin{itemize}
+        \item \emph{neurons}: troca o último valor entre os indivíduos
+        \item \emph{epochs}: troca para a quantidade de epochs do companheiro
+    \end{itemize}
+    \item técnica de mutação: aleatóriamente seleciona um ou mais alelos para mutar, baseando-se na taxa de mutação dos alelos.
+    \begin{itemize}
+        \item \emph{layers}: gera um número aleatório e duplica ou remove dados da lista de \emph{neurons} conforme necessário.
+        \item \emph{neurons}: gera um novo número aleatório (distribuição uniforme) dentro do conjunto de valores válidos
+        \item \emph{epochs}: gera um novo número aleatório (distribuição uniforme) dentro do conjunto de valores válidos
+    \end{itemize}
+    \item epochs: [1-10]
+    \item layers: [1-4]
+    \item neurons: [100-2000]
+    \item features: [1-100]
+    \item critério de parada: limite de gerações atingido
+    \item loss: Figura \ref{fig:loss_mnist_06}
+    \item accuracy: Figura \ref{fig:acc_mnist_06}
+    \item \textbf{melhor indivíduo}: Layers: 3, Neurons: [465.81245762 328.73175283 328.73175283], Loss: 0.05875796907646581, Epochs: 5, Acc: 0.9825000166893005
+\end{itemize}
+
+\begin{figure}[htbp]
+        \centering \includegraphics[width=1\columnwidth]{./ia_proj_images/mnist/6/loss.png}
+        \caption{
+                \label{fig:loss_mnist_06}
+                Loss
+        }
+\end{figure}
+\begin{figure}[htbp]
+        \centering \includegraphics[width=1\columnwidth]{./ia_proj_images/mnist/6/acc.png}
+        \caption{
+                \label{fig:acc_mnist_06}
+                Accuracy
+        }
+\end{figure}
+
+\subsubsection{Configuração 7}
+
+\begin{itemize}
+    \item tamanho da população: 5
+    \item gerações (max): 100
+    \item taxa de mutação: 0.7
+    \item taxa de crossover: 0.8
+    \item técnica de seleção: toda a população
+    \item técnica de crossover: aleatóriamente seleciona um ou mais alelos para fazer o crossover
+    \begin{itemize}
+        \item \emph{neurons}: troca o último valor entre os indivíduos
+        \item \emph{epochs}: troca para a quantidade de epochs do companheiro
+    \end{itemize}
+    \item técnica de mutação: aleatóriamente seleciona um ou mais alelos para mutar, baseando-se na taxa de mutação dos alelos.
+    \begin{itemize}
+        \item \emph{layers}: gera um número aleatório e duplica ou remove dados da lista de \emph{neurons} conforme necessário.
+        \item \emph{neurons}: gera um novo número aleatório (distribuição uniforme) dentro do conjunto de valores válidos
+        \item \emph{epochs}: gera um novo número aleatório (distribuição uniforme) dentro do conjunto de valores válidos
+    \end{itemize}
+    \item epochs: [1-10]
+    \item layers: [1-4]
+    \item neurons: [100-2000]
+    \item features: [1-100]
+    \item critério de parada: limite de gerações atingidos \textbf{ou} sem variação por 20 gerações
+    \item loss: Figura \ref{fig:loss_mnist_07}
+    \item accuracy: Figura \ref{fig:acc_mnist_07}
+    \item \textbf{melhor indivíduo}: Layers: 2, Neurons: [460.28380887 221.80215432], Loss: 0.06304866494573652, Epochs: 4, Acc: 0.9815999865531921
+\end{itemize}
+
+\begin{figure}[htbp]
+        \centering \includegraphics[width=1\columnwidth]{./ia_proj_images/mnist/7/loss.png}
+        \caption{
+                \label{fig:loss_mnist_07}
+                Loss
+        }
+\end{figure}
+\begin{figure}[htbp]
+        \centering \includegraphics[width=1\columnwidth]{./ia_proj_images/mnist/7/acc.png}
+        \caption{
+                \label{fig:acc_mnist_07}
+                Accuracy
+        }
+\end{figure}
+
+\subsection{Autoencoder MNIST}
+
+\begin{figure}[htbp]
+        \centering \includegraphics[width=1\columnwidth]{./ia_proj_images/mnist_auto_encoder/config_inicial_fixed_epochs_loss.png}
+        \caption{
+                \label{fig:loss_mnist_autoencoder}
+                Loss
+        }
+\end{figure}
+
+\subsection{Face Autoencoder}
+
+
+\begin{figure}[htbp]
+        \centering \includegraphics[width=.7\columnwidth]{./ia_proj_images/faces_auto_encoder/esther.jpg}
+        \caption{
+                \label{fig:esther}
+                Input
+        }
+\end{figure}
+
+
+\begin{figure}[htbp]
+        \centering \includegraphics[width=1\columnwidth]{./ia_proj_images/faces_auto_encoder/esther_auto.png}
+        \caption{
+                \label{fig:esther_auto}
+                Output
+        }
+\end{figure}
+
+\begin{figure}[htbp]
+        \centering \includegraphics[width=1\columnwidth]{./ia_proj_images/faces_auto_encoder/loss.png}
+        \caption{
+                \label{fig:loss_esther}
+                Loss
+        }
+\end{figure}
 
 \section{Discussão}
 Em relação aos testes realizados com a rede \emph{MNIST}:
@@ -255,6 +458,10 @@ Podemos realizar a seguinte discussão em relação às configurações encontra
     \item taxa de mutação
     \item taxa de crossover
 \end{itemize}
+
+Nas diferentes configurações, testamos duas funções de fitness, uma minimizando a função de \emph{loss} da rede e uma otimizando a métrica de \emph{accuracy}, optamos por fazer a maioria dos testes minimizando o \emph{loss} já que no geral, quanto menor o loss melhor é a accuracy, e o teste maximizando a accuracy não forneceu os melhores resultados.
+
+Outra alteração foi a adição do núemro de epochs no cromossomo, que inicialmente era uma valor fixo (4). Isso se deu ao fato de que as redes estavam ficando limitadas pelo o núemro de epochs, já que uma rede pequena sofre overfitting em 4 epochs e uma grande não treina adequadamente. Por isso o número de epochs que a rede treina se tornou outro parâmetro do indivíduo, que trouxe resultados melhores. \\
 
 Agora uma breve discussão sobre as redes autoencoder testadas. 
 
@@ -274,16 +481,14 @@ Então com recursos limitados e redes mais complexas, um algorítmo genético n�
 Ainda sim, gostaríamos de argumentar que o projeto pode ser considerado um sucesso no que se refere ao seu objetivo principal: implementar, aplicar e analisar os resultados obtidos através de um algoritmo genético aplicado a um problema real ou da literatura.
 
 
-\cite{Rowling:1997}
-
 
 %******************************************************************************
 % Referências - Definidas no arquivo Relatorio.bib
- +----------------+
+%  +----------------+
 
-\bibliographystyle{IEEEtran}
+% \bibliographystyle{IEEEtran}
 
-\bibliography{Relatorio}
+% \bibliography{Relatorio}
 
 
 %******************************************************************************
