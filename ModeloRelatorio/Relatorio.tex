@@ -40,7 +40,7 @@
 
 \urlstyle{tt}
 % Indicar o nome do autor e o curso/nível (grad-mestrado-doutorado-especial)
-\title{Título do Trabalho}
+\title{Algoritmos Genéticos + Redes Neurais = ?}
 \author{%
  \IEEEauthorblockN{João Vitor Araki Gonçalves\,\IEEEauthorrefmark{1}}
  \IEEEauthorblockN{Lucy Miyuki Miyagusiku Narita\,\IEEEauthorrefmark{2}}
@@ -73,6 +73,8 @@ As redes neurais são o ponto central da revolução do \emph{Deep Learning}. A 
 
 Para este projeto, procuramos fazer o \emph{tunning} dos parâmetros de uma rede neural com um algoritmo genético. Trabalho que normalmente é feito "à mão" com base em experimentação e determinação destes valores de forma empírica.
 
+O algoritmo foi implementado de forma genérica, sendo possível utilizá-lo com entradas genéricas, desde que sejam especificados as formas de \emph{crossover} e \emph{mutação} específicas para o problema que se deseja resolver.
+
 \subsection{Indivíduo (Cromossomo)}
 
 Nosso indivíduo é composto por 4 valores reais:
@@ -84,9 +86,117 @@ Nosso indivíduo é composto por 4 valores reais:
     \item número de features
 \end{itemize}
 
+A função de \emph{fitness} foi dada pelo inverso da função de perda da rede.
+
 \section{Resultados e Discussão}
 
-Nesta seção você deve apresentar claramente os resultados obtidos para os testes efetuados. Procure organizar os dados utilizando uma linguagem científica. Algumas opções são o uso de tabelas e gráficos, para que a compreensão seja fácil e rápida.
+\subsection{01}
+
+\begin{itemize}
+    \item rede: mnist
+    \item tamanho da população: 10
+    \item gerações (max): 100
+    \item taxa de mutação:
+    \item taxa de crossover:
+    \item técnica de seleção: a melhor metade da população
+    \item técnica de crossover: aleatóriamente seleciona um ou mais alelos para mutar, baseando-se na taxa de mutação dos alelos. Mutação de \emph{layers}: gera um número número aleatório e 
+    \item técnica de mutação:
+    \item epochs: [1-10]
+    \item layers: [0-4]
+    \item neurons: [100-2000]
+    \item features: [1-4]
+    \item critério de parada: limite de gerações atingido
+    \item \textbf{melhor indivíduo}: Layers: 3, Neurons: [219  12 182], Loss: 0.06365562731241807, Epochs: 7
+    \item loss: Figura \ref{fig:loss_mnist_01}
+    \item accuracy: Figura \ref{fig:acc_mnist_01}
+\end{itemize}
+
+\begin{figure}[htbp]
+        \centering \includegraphics[width=1\columnwidth]{./imgs/01_mnist.png}
+        \caption{
+                \label{fig:loss_mnist_01}
+                Loss
+        }
+\end{figure}
+\begin{figure}[htbp]
+        \centering \includegraphics[width=1\columnwidth]{./imgs/01_mnist_acc.png}
+        \caption{
+                \label{fig:acc_mnist_01}
+                Accuracy
+        }
+\end{figure}
+
+\subsection{02}
+
+\begin{itemize}
+    \item rede: autoencoder (mnist)
+    \item tamanho da população: 10
+    \item gerações (max): 100
+    \item taxa de mutação:
+    \item taxa de crossover:
+    \item técnica de seleção:
+    \item técnica de crossover:
+    \item técnica de mutação:
+    \item epochs: [1-10]
+    \item layers: [0-4]
+    \item neurons: [100-2000]
+    \item features: [1-4]
+    \item critério de parada: limite de gerações atingido
+    \item \textbf{melhor indivíduo}: Layers: 3, Neurons: [466 137 334], Loss: 0.060888413391448556, Epochs: 4
+    \item loss: Figura \ref{fig:loss_mnist_auto_01}
+    \item accuracy: Figura \ref{fig:acc_mnist_auto_01}
+\end{itemize}
+
+\begin{figure}[htbp]
+        \centering \includegraphics[width=1\columnwidth]{./imgs/01_mnist_auto.png}
+        \caption{
+                \label{fig:loss_mnist_auto_01}
+                Loss
+        }
+\end{figure}
+\begin{figure}[htbp]
+        \centering \includegraphics[width=1\columnwidth]{./imgs/01_mnist_auto_acc.png}
+        \caption{
+                \label{fig:acc_mnist_auto_01}
+                Accuracy
+        }
+\end{figure}
+
+\subsection{03}
+
+\begin{itemize}
+    \item rede: mnist (?)
+    \item tamanho da população: 5
+    \item gerações (max): 100
+    \item taxa de mutação:
+    \item taxa de crossover:
+    \item técnica de seleção:
+    \item técnica de crossover:
+    \item técnica de mutação:
+    \item epochs: [1-10]
+    \item layers: [0-4]
+    \item neurons: [100-2000]
+    \item features: [1-4]
+    \item critério de parada: limite de gerações atingido
+    \item \textbf{melhor indivíduo}: Layers: 3, Neurons: [466 137 334], Loss: 0.060888413391448556, Epochs: 4
+    \item loss: Figura \ref{fig:loss_mnist_auto_01}
+    \item accuracy: Figura \ref{fig:acc_mnist_auto_01}
+\end{itemize}
+
+\begin{figure}[htbp]
+        \centering \includegraphics[width=1\columnwidth]{./imgs/01_mnist_auto.png}
+        \caption{
+                \label{fig:loss_mnist_auto_01}
+                Loss
+        }
+\end{figure}
+\begin{figure}[htbp]
+        \centering \includegraphics[width=1\columnwidth]{./imgs/01_mnist_auto_acc.png}
+        \caption{
+                \label{fig:acc_mnist_auto_01}
+                Accuracy
+        }
+\end{figure}
 
 \begin{itemize}
     \item tamanho da população
