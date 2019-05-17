@@ -1,0 +1,6 @@
+Best: Layers: 2, Neurons: [460.28380887 221.80215432], Loss: 0.06304866494573652, Epochs: 4, Acc: 0.9815999865531921
+
+Breeding pool da população inteira
+mutation_02 crossover_01 epochs variáveis, 5 individuos
+
+Stop if stagnated for 20 gens

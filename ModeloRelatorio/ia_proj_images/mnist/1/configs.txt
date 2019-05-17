@@ -1,0 +1,3 @@
+Best: Layers: 3, Neurons: [434 396 410], # Features: 36, Loss: 0.06390089303823188
+
+4 epochs fixed, 5 population

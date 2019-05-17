@@ -1,0 +1,3 @@
+Best: Layers: 2, Neurons: [467.68464507  88.63032893], Loss: 0.05897278582537547, Epochs: 5
+
+mutation_02 crossover_01 pop: 5, 100 gerações

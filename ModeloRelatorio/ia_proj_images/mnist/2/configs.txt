@@ -1,0 +1,3 @@
+Best: Layers: 3, Neurons: [219  12 182], Loss: 0.06365562731241807, Epochs: 7
+
+10 individuos epochs variáveis

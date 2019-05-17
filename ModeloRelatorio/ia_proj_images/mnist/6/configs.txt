@@ -1,0 +1,4 @@
+Best: Layers: 3, Neurons: [465.81245762 328.73175283 328.73175283], Loss: 0.05875796907646581, Epochs: 5, Acc: 0.9825000166893005
+
+Breeding pool da população inteira
+mutation_02 crossover_01 epochs variáveis, 5 individuos

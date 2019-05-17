@@ -1,0 +1,3 @@
+Best: Layers: 3, Neurons: [466 137 334], Loss: 0.060888413391448556, Epochs: 4
+
+mutation_02 crossover_02 epochs variáveis, 10 individuos

@@ -1,0 +1,4 @@
+Best: Layers: 2, Neurons: [414.45263917 416.51997758], Loss: 0.06248636918338016, Epochs: 8, Acc: 0.9833999872207642
+
+otimisando acc
+mutation_02 crossover_01 epochs variáveis, 5 individuos
