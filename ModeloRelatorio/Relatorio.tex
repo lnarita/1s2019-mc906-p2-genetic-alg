@@ -63,11 +63,16 @@
 Este trabalho tem como objetivo implementar e aplicar uma técnica de computação evolutiva na prática.
 Algoritmos genéticos problemas são resolvidos através de um processo evolutivo que resulta na solução mais adequada dado algum critério, são, portanto, muito utilizados para problemas de otimização e de busca onde o crescimento exponencial das combinações faz de um algoritmo tradicional de busca inviável.
 
+O código desenvolvido se encontra \href{https://github.com/jovit/mc906/tree/master/project_2}{neste repositório}\footnotemark.
+
+\footnotetext{https://github.com/jovit/mc906/tree/master/project\_2}
+
 \section{Dependências}
 
-O projeto foi desenvolvido em Python 3.X. As dependências se encontram no arquivo \texttt{requirements.txt}.
+O projeto foi desenvolvido em Python 3. As dependências se encontram no arquivo \texttt{requirements.txt}.
 
 Utilizamos o python, pois a biblioteca utilizada para \emph{deeplearning} foi o \emph{tensorflow}, e não haveria vantagem em implementar o algorítmo genético em outra linguagem, aumentando a complexidade do projeto e exigindo uma interface entre o python e uma outra linguagem qualquer.
+
 \section{Trabalho Proposto}
 
 As redes neurais são o ponto central da revolução do \emph{Deep Learning}. A tecnologia avançou a ponto de ser capaz de sintetizar voz, reconhecer imagens e alterar o conteúdo de videos de forma a adulterar a informação passada originalmente.
@@ -85,7 +90,7 @@ Nosso indivíduo é composto por 4 valores reais:
 \begin{itemize}
     \item número de epochs
     \item quantidade de layers
-    \item output space dimension para cada layer
+    \item neurons (output space dimension para cada layer)
     \item número de features
 \end{itemize}
 
@@ -118,7 +123,7 @@ Devido à questões de tempo de execução, só pudemos realizar testes profundo
     \item técnica de mutação: aleatóriamente seleciona um ou mais alelos para mutar, baseando-se na taxa de mutação dos alelos.
     \begin{itemize}
         \item \emph{layers}: gera um número aleatório e duplica ou remove dados da lista de \emph{neurons} conforme necessário.
-        \item \emph{neurons}: gera um novo número aleatório dentro do conjunto de valores válidos
+        \item \emph{neurons}: atualiza alguns índices com novos valores aleatórios dentro do conjunto de valores válidos
         \item \emph{features}: gera um novo número aleatório dentro do conjunto de valores válidos
     \end{itemize}
     \item epochs: 4
@@ -156,7 +161,7 @@ Devido à questões de tempo de execução, só pudemos realizar testes profundo
     \item técnica de mutação: aleatóriamente seleciona um ou mais alelos para mutar, baseando-se na taxa de mutação dos alelos.
     \begin{itemize}
         \item \emph{layers}: gera um número aleatório e duplica ou remove dados da lista de \emph{neurons} conforme necessário.
-        \item \emph{neurons}: gera um novo número aleatório dentro do conjunto de valores válidos
+        \item \emph{neurons}: atualiza alguns índices com novos valores aleatórios dentro do conjunto de valores válidos
         \item \emph{features}: gera um novo número aleatório dentro do conjunto de valores válidos
         \item \emph{epochs}: gera um novo número aleatório dentro do conjunto de valores válidos
     \end{itemize}
@@ -201,7 +206,7 @@ Devido à questões de tempo de execução, só pudemos realizar testes profundo
     \item técnica de mutação: aleatóriamente seleciona um ou mais alelos para mutar, baseando-se na taxa de mutação dos alelos.
     \begin{itemize}
         \item \emph{layers}: gera um número aleatório e duplica ou remove dados da lista de \emph{neurons} conforme necessário.
-        \item \emph{neurons}: gera um novo número aleatório (distribuição uniforme) dentro do conjunto de valores válidos
+        \item \emph{neurons}: atualiza todos os valores para valores aleatórios (distribuição uniforme)
         \item \emph{epochs}: gera um novo número aleatório (distribuição uniforme) dentro do conjunto de valores válidos
     \end{itemize}
     \item epochs: [1-10]
@@ -245,7 +250,7 @@ Devido à questões de tempo de execução, só pudemos realizar testes profundo
     \item técnica de mutação: aleatóriamente seleciona um ou mais alelos para mutar, baseando-se na taxa de mutação dos alelos.
     \begin{itemize}
         \item \emph{layers}: gera um número aleatório e duplica ou remove dados da lista de \emph{neurons} conforme necessário.
-        \item \emph{neurons}: gera um novo número aleatório (distribuição uniforme) dentro do conjunto de valores válidos
+        \item \emph{neurons}: atualiza todos os valores para valores aleatórios (distribuição uniforme)
         \item \emph{epochs}: gera um novo número aleatório (distribuição uniforme) dentro do conjunto de valores válidos
     \end{itemize}
     \item epochs: 5
@@ -289,7 +294,7 @@ Devido à questões de tempo de execução, só pudemos realizar testes profundo
     \item técnica de mutação: aleatóriamente seleciona um ou mais alelos para mutar, baseando-se na taxa de mutação dos alelos.
     \begin{itemize}
         \item \emph{layers}: gera um número aleatório e duplica ou remove dados da lista de \emph{neurons} conforme necessário.
-        \item \emph{neurons}: gera um novo número aleatório (distribuição uniforme) dentro do conjunto de valores válidos
+        \item \emph{neurons}: atualiza todos os valores para valores aleatórios (distribuição uniforme)
         \item \emph{epochs}: gera um novo número aleatório (distribuição uniforme) dentro do conjunto de valores válidos
     \end{itemize}
     \item epochs: [1-10]
@@ -333,7 +338,7 @@ Devido à questões de tempo de execução, só pudemos realizar testes profundo
     \item técnica de mutação: aleatóriamente seleciona um ou mais alelos para mutar, baseando-se na taxa de mutação dos alelos.
     \begin{itemize}
         \item \emph{layers}: gera um número aleatório e duplica ou remove dados da lista de \emph{neurons} conforme necessário.
-        \item \emph{neurons}: gera um novo número aleatório (distribuição uniforme) dentro do conjunto de valores válidos
+        \item \emph{neurons}: atualiza todos os valores para valores aleatórios (distribuição uniforme)
         \item \emph{epochs}: gera um novo número aleatório (distribuição uniforme) dentro do conjunto de valores válidos
     \end{itemize}
     \item epochs: [1-10]
@@ -377,7 +382,7 @@ Devido à questões de tempo de execução, só pudemos realizar testes profundo
     \item técnica de mutação: aleatóriamente seleciona um ou mais alelos para mutar, baseando-se na taxa de mutação dos alelos.
     \begin{itemize}
         \item \emph{layers}: gera um número aleatório e duplica ou remove dados da lista de \emph{neurons} conforme necessário.
-        \item \emph{neurons}: gera um novo número aleatório (distribuição uniforme) dentro do conjunto de valores válidos
+        \item \emph{neurons}: atualiza todos os valores para valores aleatórios (distribuição uniforme)
         \item \emph{epochs}: gera um novo número aleatório (distribuição uniforme) dentro do conjunto de valores válidos
     \end{itemize}
     \item epochs: [1-10]
@@ -407,6 +412,8 @@ Devido à questões de tempo de execução, só pudemos realizar testes profundo
 
 \subsection{Autoencoder MNIST}
 
+O gráfico da perda da rede pode ser visto na Figura \ref{fig:loss_mnist_autoencoder}.
+
 \begin{figure}[htbp]
         \centering \includegraphics[width=1\columnwidth]{./ia_proj_images/mnist_auto_encoder/config_inicial_fixed_epochs_loss.png}
         \caption{
@@ -417,6 +424,8 @@ Devido à questões de tempo de execução, só pudemos realizar testes profundo
 
 \subsection{Face Autoencoder}
 
+O gráfico da perda da rede pode ser visto na Figura \ref{fig:loss_esther}.
+As Figuras \ref{fig:esther} e \ref{fig:esther_auto} apresentam a entrada e a saída para o modelo treinado segundo os parâmetros encontrados pelo nosso algoritmo.\\
 
 \begin{figure}[htbp]
         \centering \includegraphics[width=.7\columnwidth]{./ia_proj_images/faces_auto_encoder/esther.jpg}
@@ -443,20 +452,20 @@ Devido à questões de tempo de execução, só pudemos realizar testes profundo
         }
 \end{figure}
 
+
+
 \section{Discussão}
 Em relação aos testes realizados com a rede \emph{MNIST}:
-Em todas as configurações, pode-se observar uma melhora do decorrer da execução das gerações, principalmente a configuração \emph{7} que obteve o melhor resultado de todas.
+Em todas as configurações, pode-se observar uma melhora do decorrer da execução das gerações, principalmente a configuração \emph{6} que obteve o melhor resultado de todas.
 Podemos realizar a seguinte discussão em relação às configurações encontradas como melhores para esse algorítmo genético.
 
 \begin{itemize}
     \item \emph{tamanho da população}: uma população de 5 indivíduos apresentou o melhor resultado, além de ser duas vezes mais rápido de executar, convergiu só um pouco depois da sua versão com 10 indivíduos, em nosso caso onde paralelização não é uma opção, uma população menor apresentou melhores resultados.
-    \item \emph{critério de parada}: realizamos testes com critério de parada onde se o fitness não melhorasse por 20 gerações, o treino é interrompido. Porém observando os gráficos, temos períodos de quase 50 gerações sem melhoras, para então uma melhora significativa dos resultados. Então para evitar perdas, mantivemos o número de gerações fixas em 100, que é aproximadamente o máximo que podemos razoávelmente manter executando (apróxidamente 2h de execução para às 100 gerações)
+    \item \emph{critério de parada}: realizamos testes com critério de parada onde se o fitness não melhorasse por 20 gerações, o treino é interrompido. Porém observando os gráficos, temos períodos de quase 50 gerações sem melhoras, para então uma melhora significativa dos resultados. Então para evitar perdas, mantivemos o número de gerações fixas em 100, que é aproximadamente o máximo que podemos razoávelmente manter executando (apróxidamente 2h de execução para as 100 gerações)
     \item \emph{técnica de seleção}: Antes era feita a a seleção de apenas metade dos melhores indivíduos para reprodução, observamos que obtivemos resultados melhores selecionando \emph{todos} os indivíduos. Isso pode-se explicar pelo fato de que temos poucos indivíduos na população, metade deles são apenas dois, que torda a progressão bem lenta por mutações aleatórias, com todos os 5 selecionados, obtivemos melhores soluções mais rápido.
-    \item técnica de crossover
-    \item técnica de mutação
-    \item método de substituição
-    \item taxa de mutação
-    \item taxa de crossover
+    \item \emph{técnica de crossover}: nossa variação da técnica de crossover não apresentou melhoras expressivas nos resultados, uma vez que apenas removemos os modos de crossover de alguns alelos e diminuímos a variabilidade (deixando o crossover menos aleatório) criada por ele.
+    \item \emph{técnica de mutação}: alterar todos os valores dos neurons em uma mutação apresentou melhores resultados em comparação com alterar apenas alguns.
+    \item \emph{taxa de mutação} e \emph{taxa de crossover}: uma vez que os melhores \emph{hyper parameters} para nossa rede não estão distribuídos de forma regular no domínio, percebemos uma melhora do algoritmo ao aumentar de ambas as taxas devido à maior variação genética da solução.
 \end{itemize}
 
 Nas diferentes configurações, testamos duas funções de fitness, uma minimizando a função de \emph{loss} da rede e uma otimizando a métrica de \emph{accuracy}, optamos por fazer a maioria dos testes minimizando o \emph{loss} já que no geral, quanto menor o loss melhor é a accuracy, e o teste maximizando a accuracy não forneceu os melhores resultados.
@@ -468,6 +477,8 @@ Agora uma breve discussão sobre as redes autoencoder testadas.
 Primeiramente sobre o autoencoder \emph{MNIST}: Obtivemos resultados bons com os testes iniciais com essa rede, porém o tempo para executar todas as 100 gerações do algorítmo genético se mostrou proibitivo para realizar testes com outras configurações, então esse caso fica apenas como prova de que essa técnica pode ser utilizada em diferentes tipos de redes neurais, não apenas redes classificadoras simples.
 
 Finalmente sobre o autoencoder de rostos: Essa rede foi a que demandou o maior esforço para configuração inicial. Foi necessário fazer crawling de 40 mil fotos de rostos de artistas na internet, e pré-processar todas elas com um algorítmo de centralização de rostos. Infelizmente, essa rede se mostrou mais demorada para se treinar que o esperado, para treinar a rede até resultados satisfatórios, foi necessário treina-la por um total de 8 horas. Esse seria o tempo para executar a função de fitness de um único indivíduo no algorítmo genético, claramente algo proibitivo. Como forma de conceito fizemos um teste treinando cada rede um total de 2 minutos (muito longe de se obter resultados razoáveis), e é possível observar uma melhora no resultado obtido, então teoricamente, se tivéssemos o tempo hábil e recursos, seria possível otimizar toda a rede para \emph{hyper parameters} ideais.
+
+Na figura 16, é possível observar o resultado depois de 8 horas de treino do autoencoder, com o input original sendo a imagem 15.
 
 
 Outro ponto é que esse projeto não seria possível sem acesso à uma \emph{GPU} para acelerar o treino das redes. O tempo de execução numa \emph{GTX 970} foi de 1 hora e 30 minutos no total para cada configuração, e teria durado um total de 4 horas caso fosse executada somente na \emph{CPU} (no caso um \emph{i7 4790k}), o que inviabilizaria as análises necessárias pelo projeto.
